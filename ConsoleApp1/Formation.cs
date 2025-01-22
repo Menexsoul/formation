@@ -10,17 +10,21 @@ namespace ConsoleApp1
     {
         private string code;
         private string libelle;
-        private List<string> listSession;
+        private List<Session> mesSessions;
 
         public Formation(string unCode, string unLibelle)
         {
             this.code = unCode;
             this.libelle = unLibelle;
-            this.listSession = new List<string>();
+            this.mesSessions = new List<Session>();
         }
 
-        public void affecteParticipants(string Participant , int numeroSession)
+        public void affecteParticipants(Participant p , int numeroSession)
         {
+            if (this.mesSessions != null)
+            {
+                
+            }
             
         }
 
@@ -44,14 +48,14 @@ namespace ConsoleApp1
             return this.libelle;
         }
 
-        public void setMesSessions(List<string> uneSessions)
+        public void setMesSessions(List<Session> uneSessions)
         {
-            this.listSession = uneSessions;
+            this.mesSessions = uneSessions;
         }
 
-        public List<string> getMesSessions()
+        public List<Session> getMesSessions()
         {
-            return this.listSession;
+            return this.mesSessions;
         }
     }
 
